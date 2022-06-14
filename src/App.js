@@ -1,5 +1,6 @@
 import React, { useState} from "react";
 import Button from "./components/Button";
+import Input from "./components/Input";
 
 const App = () => {
   // ini buat datanya
@@ -31,13 +32,14 @@ const App = () => {
     <div>
       <br/>
       <div>
-        <input 
-          type="text" 
-          placeholder='Input Task Here..'
+        <Input 
           value={newTaskValue}
-          onChange={(e)=>setNewTaskValue(e.target.value)}
-        />
-        <Button text="AddTask" onClick={actionAddTask}></Button>
+          onChange={(e)=>setNewTaskValue(e.target.value)}>
+        </Input>
+        <Button 
+          text="AddTask" 
+          onClick={actionAddTask}>
+        </Button>
       </div>
       <div>
         <ul>
@@ -47,7 +49,7 @@ const App = () => {
         </ul>
       </div>
       <Button background="red" text="Clear" onClick={() => setTaskList({data:[]})}></Button>
-      <Button text="Hapus"></Button>
+      <Button text="Edit"></Button>
     </div>
   );
 }
