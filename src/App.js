@@ -29,6 +29,11 @@ const App = () => {
   // btw ini rand: Math.random bisa diganti angka sama2 1 atau 1; rand + 1
   // sebenernya gak usah pake rand sih, asal di bikin object juga bisa aja
 
+  const deleteTask = (value) => {
+    const newList = Array.from(taskList.data).filter((item) => item !== value);
+    setTaskList({data: newList});
+  }
+
   return (
     <div>
       <br/>
@@ -43,7 +48,12 @@ const App = () => {
         </Button>
       </div>
       <div>
-        <ListItem list={taskList.data.map((item)=>(<li>{item}</li>))} ></ListItem>
+        <ListItem list={taskList.data.map((item)=>(
+          <li>
+            {item}
+            <Button text="hapus" onClick={()=>deleteTask(item)}/>
+          </li>))} >
+        </ListItem>
       </div>
       <Button background="red" text="Clear" onClick={() => setTaskList({data:[]})}></Button>
       <Button text="Edit"></Button>
