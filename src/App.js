@@ -1,6 +1,7 @@
 import React, { useState} from "react";
 import Button from "./components/Button";
 import Input from "./components/Input";
+import ListItem from "./components/ListItem";
 
 const App = () => {
   // ini buat datanya
@@ -42,11 +43,7 @@ const App = () => {
         </Button>
       </div>
       <div>
-        <ul>
-          {taskList.data.map((item)=>(
-            <li>{item}</li>
-          ))}
-        </ul>
+        <ListItem list={taskList.data.map((item)=>(<li>{item}</li>))} ></ListItem>
       </div>
       <Button background="red" text="Clear" onClick={() => setTaskList({data:[]})}></Button>
       <Button text="Edit"></Button>
