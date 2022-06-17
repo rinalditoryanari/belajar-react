@@ -1,16 +1,18 @@
 import React, { useState} from "react";
 
 const Button = ({text="Button", background="green", ...props}) => {
+  const styles = {
+    container: {
+      background: (background),
+      border: 0,
+      color: 'white',
+      borderRadius: 5,
+  
+  }}
   return (
     <button
-        style={{
-            background: (background),
-            border: 0,
-            color: 'white',
-            borderRadius: 5,
-        }}
-        {...props}
-    >
+        style={styles.container}
+        {...props}>
         {text}
     </button>
   );
