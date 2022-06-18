@@ -1,4 +1,5 @@
 import React, { useState} from "react";
+import { globalstyles } from "../theme/globalstyles";
 
 const Button = ({text="Button", background="green", ...props}) => {
   const styles = {
@@ -11,7 +12,7 @@ const Button = ({text="Button", background="green", ...props}) => {
   }}
   return (
     <button
-        style={styles.container}
+        style={globalstyles}
         {...props}>
         {text}
     </button>
