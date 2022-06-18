@@ -1,7 +1,7 @@
-import React, { useState} from "react";
-import { globalstyles } from "../theme/globalstyles";
+import React from "react";
+import globalStyles from "../theme/globalStyles"
 
-const Button = ({text="Button", background="green", ...props}) => {
+const Button = ({text="Button", backgroundColor="green", ...props}) => {
   const styles = {
     container: {
       background: (background),
@@ -12,7 +12,7 @@ const Button = ({text="Button", background="green", ...props}) => {
   }}
   return (
     <button
-        style={globalstyles}
+        style={globalStyles}
         {...props}>
         {text}
     </button>
