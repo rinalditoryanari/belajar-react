@@ -58,6 +58,12 @@ const App = () => {
       </div>
       <Button backgroundColor="red" text="Clear" onClick={() => setTaskList({data:[]})}></Button>
       <Button text="Edit"></Button>
+      <div>
+        <div style={{backgroundColor: "#ccc", width: 50, height: 50, margin: 5, float: "left"}}></div>
+        <div style={{backgroundColor: "#ccc", width: 50, height: 50, margin: 5, float: "left"}}></div>
+        <div style={{backgroundColor: "#ccc", width: 50, height: 50, margin: 5, float: "left"}}></div>
+      </div>
+      <div style={{backgroundColor: "black", width: 50, height: 50, margin: 5, clear: "both"}}></div>
     </div>
   );
 }
