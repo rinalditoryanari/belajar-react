@@ -2,6 +2,7 @@ import React, { useState} from "react";
 import Button from "./components/Button";
 import Input from "./components/Input";
 import ListItem from "./components/ListItem";
+import { globalstyles } from "./theme/globalStyles";
 
 const App = () => {
   // ini buat datanya
@@ -35,7 +36,7 @@ const App = () => {
   }
 
   return (
-    <div>
+    <div style={globalstyles.row}>
       <br/>
       <div>
         <Input 
@@ -55,7 +56,7 @@ const App = () => {
           </li>))} >
         </ListItem>
       </div>
-      <Button background="red" text="Clear" onClick={() => setTaskList({data:[]})}></Button>
+      <Button backgroundColor="red" text="Clear" onClick={() => setTaskList({data:[]})}></Button>
       <Button text="Edit"></Button>
     </div>
   );
