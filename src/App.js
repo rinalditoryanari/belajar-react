@@ -3,6 +3,22 @@ import Button from './components/Button';
 import Input from './components/Input';
 import ListItem from './components/ListItem';
 import { globalstyles } from './theme/globalStyles';
+import styled from 'styled-components';
+
+// Create a <Title> react component that renders an <h1> which is
+// centered, palevioletred and sized at 1.5em
+const Title = styled.h1`
+  font-size: 1.5em;
+  text-align: center;
+  color: palevioletred;
+`;
+
+// Create a <Wrapper> react component that renders a <section> with
+// some padding and a papayawhip background
+const Wrapper = styled.section`
+  padding: 4em;
+  background: papayawhip;
+`;
 
 const App = () => {
   // ini buat datanya
@@ -101,7 +117,6 @@ const App = () => {
           clear: 'both',
         }}
       ></div>
-
       <h2>Flex</h2>
       <div
         style={{
@@ -173,6 +188,9 @@ const App = () => {
           clear: 'both',
         }}
       ></div>
+      <Wrapper>
+        <Title>Hello World, this is my first styled component!</Title>
+      </Wrapper>
     </div>
   );
 };
