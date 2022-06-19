@@ -1,4 +1,4 @@
-export const globalstyles = {
+export const globalStyles = {
     container: (backgroundColor) => ({
         background: backgroundColor,
         border: 0,
@@ -12,7 +12,7 @@ export const globalstyles = {
     },
 };
 
-export const globalstyles1 = {
+export const globalStyles1 = {
     container: (backgroundColor) => ({
         background: backgroundColor,
         border: 0,

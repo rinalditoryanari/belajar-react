@@ -1,10 +1,10 @@
 import React, { useState} from "react";
-import { globalstyles } from "../theme/globalStyles";
+import { globalStyles } from "../theme/globalStyles";
 
 const Button = ({text="Button", backgroundColor="green", ...props}) => {
   return (
     <button
-        style={globalstyles.container(backgroundColor)}
+        style={globalStyles.container(backgroundColor)}
         {...props}>
         {text}
     </button>

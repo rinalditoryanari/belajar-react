@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Button from './components/Button';
 import Input from './components/Input';
 import ListItem from './components/ListItem';
-import { globalstyles } from './theme/globalStyles';
+import { globalStyles } from './theme/globalStyles';
 import styled from 'styled-components';
 
 // Create a <Title> react component that renders an <h1> which is
@@ -53,7 +53,7 @@ const App = () => {
   };
 
   return (
-    <div style={globalstyles.row}>
+    <div style={globalStyles.row}>
       <br />
       <div>
         <Input
