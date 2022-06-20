@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import Button from './components/Button';
-import Input from './components/Input';
-import ListItem from './components/ListItem';
-import { globalStyles } from './theme/globalStyles';
-import styled from 'styled-components';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 // Create a <Title> react component that renders an <h1> which is
 // centered, palevioletred and sized at 1.5em
