@@ -37,20 +37,30 @@ const ArticleDetail = () => {
     },
   ]);
   const [detail, setDetail] = useState(null);
+  const [isFound, setIsFound] = useState(true);
 
   const fetchDetail = () => {
     const result = listData.find((item) => item.slug === id);
+    if (!result) {
+      setIsFound(false);
+    }
     setDetail(result);
   };
 
   useEffect(() => {
-    fetchDetail();
+    setTimeout(() => fetchDetail(), 500);
   }, []);
 
   return (
     <div>
-      <div>{detail?.title}</div>
-      <div>{detail?.content}</div>
+      {isFound ? (
+        <div>
+          <div>{detail?.title || 'Loading...'}</div>
+          <div>{detail?.content || 'Loading...'}</div>
+        </div>
+      ) : (
+        <div>404 Article Not Founds</div>
+      )}
     </div>
   );
 };
