@@ -5,6 +5,7 @@ import {
   Route,
   Link,
 } from 'react-router-dom';
+import Navbar from './components/Navbar';
 import About from './pages/about';
 import Auth from './pages/auth';
 import Home from './pages/home';
@@ -12,6 +13,7 @@ import Home from './pages/home';
 const App = () => {
   return (
     <Router>
+      <Navbar></Navbar>
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route exact path="/about" element={<About />} />
